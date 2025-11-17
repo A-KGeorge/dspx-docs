@@ -22,11 +22,11 @@
     "@mdx-js/react": "^3.0.0",
     "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.3.5",
-    "@mui/x-charts": "^8.18.0",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "recharts": "^3.4.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
