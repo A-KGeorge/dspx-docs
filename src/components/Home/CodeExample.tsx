@@ -1,28 +1,32 @@
 import { Code } from "@mui/icons-material";
+import CodeBlock from "@theme/CodeBlock";
 
 const CodeExample = () => {
   const codeString = `
-import { DspPipeline, Filters } from 'dspx';
+import { createDspPipeline } from "dspx";
 
 // 1. Create a pipeline
-const pipeline = new DspPipeline();
+const pipeline = createDspPipeline();
 
-// 2. Define a 10-tap low-pass FIR filter
-const taps = [0.05, 0.05, 0.1, 0.1, 0.4, 0.1, 0.1, 0.05, 0.05];
-const firFilter = Filters.fir(taps);
+// 2. Define a Kernel
+const kernel = new Float32Array(32).map(() => Math.random());
+
+// Sample input
+const input = new Float32Array(1024); 
+for (let i = 0; i < 1024; i++) {
+  input[i] = Math.sin((2 * Math.PI * 50 * i) / 10000);
+}
 
 // 3. Add stage to pipeline
-pipeline.addStage(firFilter);
+pipeline.convolution({
+  kernel,
+  mode: "batch", // Use batch mode for fair comparison with naive JS
+  method: "auto", // Let dspx choose between direct and FFT
+});
 
-// 4. Process data
-const input = new Float32Array(1024).map((_, i) => 
-  Math.sin(i * 0.1) + // Low-freq signal
-  Math.random() * 0.2 // High-freq noise
-);
+const output = pipeline.process(input, { channels: 1});
 
-const output = pipeline.process(input);
-
-// output now contains the filtered signal
+// output now contains the convolution of the input signal
 console.log(output);
   `;
   return (
@@ -48,14 +52,7 @@ console.log(output);
             </span>
             <Code className="h-5 w-5 text-gray-400" />
           </div>
-          <pre className="language-javascript p-6 text-sm overflow-x-auto">
-            <code
-              className="language-javascript"
-              style={{ whiteSpace: "pre-wrap" }}
-            >
-              {codeString.trim()}
-            </code>
-          </pre>
+          <CodeBlock language="javascript">{codeString.trim()}</CodeBlock>
         </div>
       </div>
     </section>

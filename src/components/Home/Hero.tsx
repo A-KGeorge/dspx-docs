@@ -11,13 +11,13 @@ const Hero = () => (
         Digital Signal Processing eXtensions for JavaScript.
       </h2>
       <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-300">
-        A high-performance DSP library for Node.js and Web environments,
-        supercharged by C++ bindings, SIMD (NEON), and a modern pipeline
-        architecture.
+        The first Node.js DSP engine built for real-time pipelines — native C++
+        speed, SIMD acceleration, and optional Redis-powered crash-safe state
+        for serverless environments.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <a
-          href="#examples"
+          href="/docs/intro" // Change this later to /docs/getting-started
           className="inline-block bg-(--ifm-color-primary) text-white font-semibold px-8 py-3 rounded-lg text-lg shadow-lg hover:bg-(--ifm-color-primary-dark) transition-colors transform hover:-translate-y-0.5"
           style={{ textDecoration: "none", color: "white" }}
         >

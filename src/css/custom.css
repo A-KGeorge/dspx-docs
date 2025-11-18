@@ -67,8 +67,3 @@
 [data-theme="dark"] .token.string {
   color: #bafaff;
 }
-
-/* Optional: underline links with faint wave-looking color */
-a {
-  text-decoration-color: var(--dspx-accent-soft);
-}
