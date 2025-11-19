@@ -1,7 +1,6 @@
 import { useState } from "react";
 import {
   GitHub,
-  Layers,
   Menu as MenuIcon,
   Close as CloseIcon,
 } from "@mui/icons-material";
@@ -15,7 +14,7 @@ const Header = () => {
     { label: "Features", href: "#features" },
     { label: "Performance", href: "#performance" },
     { label: "Examples", href: "#examples" },
-    { label: "Docs", href: "/docs/intro" },
+    { label: "Docs", href: "/docs/using%20dspx/getting-started" },
     { label: "Blog", href: "/blog" },
     {
       label: (
@@ -35,7 +34,6 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="shrink-0 flex items-center">
-            {/* <Layers className="h-8 w-8 text-(--ifm-color-primary)" /> */}
             <Logo width={64} height={32} />
             {/* Width is almost twice the height; original width = 223.2, height = 110.88 */}
             <span className="text-white text-2xl font-bold ml-3">dspx</span>

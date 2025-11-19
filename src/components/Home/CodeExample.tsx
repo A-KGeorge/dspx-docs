@@ -52,7 +52,9 @@ console.log(output);
             </span>
             <Code className="h-5 w-5 text-gray-400" />
           </div>
-          <CodeBlock language="javascript">{codeString.trim()}</CodeBlock>
+          <CodeBlock language="javascript" className="mb-0!">
+            {codeString.trim()}
+          </CodeBlock>
         </div>
       </div>
     </section>

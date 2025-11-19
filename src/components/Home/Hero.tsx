@@ -17,7 +17,7 @@ const Hero = () => (
       </p>
       <div className="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <a
-          href="/docs/intro" // Change this later to /docs/getting-started
+          href="/docs/using%20dspx/getting-started"
           className="inline-block bg-(--ifm-color-primary) text-white font-semibold px-8 py-3 rounded-lg text-lg shadow-lg hover:bg-(--ifm-color-primary-dark) transition-colors transform hover:-translate-y-0.5"
           style={{ textDecoration: "none", color: "white" }}
         >

@@ -67,3 +67,24 @@
 [data-theme="dark"] .token.string {
   color: #bafaff;
 }
+
+/* Turn the breadcrumb row into a grid with equal-height cells */
+.theme-doc-breadcrumbs .breadcrumbs {
+  display: grid;
+  grid-auto-flow: column; /* layout horizontally */
+  grid-auto-columns: max-content;
+  column-gap: 8px; /* spacing between items */
+  align-items: stretch; /* make all items equal height */
+}
+
+/* Make each breadcrumb item expand to grid cell */
+.theme-doc-breadcrumbs .breadcrumbs__item {
+  display: flex; /* to center its inner contents */
+  align-items: center;
+}
+
+/* Keep icon alignment clean */
+.theme-doc-breadcrumbs .breadcrumbHomeIcon_YNFT {
+  width: 18px;
+  height: 18px;
+}

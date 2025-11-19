@@ -1,0 +1,8 @@
+{
+  "label": "Using dspx",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to use dspx to build high-performance DSP pipelines in JavaScript and TypeScript."
+  }
+}
